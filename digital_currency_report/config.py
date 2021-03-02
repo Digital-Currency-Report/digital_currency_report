@@ -21,7 +21,7 @@ class Config(BaseSettings):
     DB_PORT: int = 5432
     DB_USERNAME: str = 'postgres'
     DB_PASSWORD: str = 'postgres'
-    DB_TABLE: str = 'auto_update'
+    DB_TABLE: str = 'digital_currency_report'
     DB_URL: str
     DB_COMMIT: int = 100
 

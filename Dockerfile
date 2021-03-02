@@ -8,7 +8,6 @@ ENV TAG=${TAG}
 ARG NO_DEV
 ENV NO_DEV=${NO_DEV}
 
-COPY ./poetry.lock /poetry.lock
 COPY ./pyproject.toml /pyproject.toml
 COPY ./digital_currency_report /digital_currency_report
 

@@ -24,7 +24,6 @@ services:
     environment:
       - DEBUG=true
     volumes:
-      - ./poetry.lock:/poetry.lock
       - ./pyproject.toml:/pyproject.toml
       - ./digital_currency_report:/digital_currency_report
     depends_on:
