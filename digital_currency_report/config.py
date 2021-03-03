@@ -22,20 +22,21 @@ class Config(BaseSettings):
     DB_USERNAME: str = 'postgres'
     DB_PASSWORD: str = 'postgres'
     DB_TABLE: str = 'digital_currency_report'
+    # database url
     DB_URL: str
-    DB_COMMIT: int = 100
+    SQLALCHEMY_URL: str
 
     class Config:
         json_dumps = dumps
         extra = 'allow'
 
-    def get(self, item, default=None) -> Any:
+    def get(self, item: str, default=None) -> Any:
         return getattr(self, item, default)
 
-    def __setitem__(self, key, value) -> None:
+    def __setitem__(self, key: str, value: Any) -> None:
         return self.__setattr__(key, value)
 
-    def __getitem__(self, item) -> Any:
+    def __getitem__(self, item: str) -> Any:
         return getattr(self, item)
 
     @property
@@ -63,8 +64,5 @@ class Config(BaseSettings):
 
 config = Config()
 if __name__ == '__main__':
-    print(config.DEBUG)
-    print(config.SQLALCHEMY_URL)
-    print(config.PACKAGE)
-    # for k, v in config.dict().items():
-    #     print(k, v)
+    for k, v in config.dict().items():
+        print(k, v)
