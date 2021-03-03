@@ -4,6 +4,8 @@ from digital_currency_report.clock.base import Timer
 from digital_currency_report.common.log import logger
 from digital_currency_report.common.task import task
 
+async def test(t):
+    logger.info(f"test clock {t}")
 
 @task.register_timer
 class PR(Timer):
@@ -12,7 +14,7 @@ class PR(Timer):
 
     @staticmethod
     async def job():
-        logger.info(f"test clock {time.time()}")
+        task.create_task(test(time.time()))
 
 
 if __name__ == '__main__':

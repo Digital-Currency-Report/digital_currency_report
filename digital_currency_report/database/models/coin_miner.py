@@ -10,7 +10,7 @@ from digital_currency_report.database.models.pool import PoolDB
 
 
 class CoinMinerDB(base, AutoIdMixin, ChangeMixin, EnableMixin):
-    __tablename__ = "pool"
+    __tablename__ = "coin_miner"
     pool_uuid: Column = Column(UUID(as_uuid=True), ForeignKey(PoolDB.uuid, ondelete="CASCADE"), nullable=False)
     # 结算单位
     unit: Column = Column(String(16), nullable=False)
