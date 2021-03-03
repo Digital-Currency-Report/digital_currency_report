@@ -16,6 +16,7 @@ error = [
 ]
 view_paths = [
     ['api', "views"],
+    ['clock', "task"],
 ]
 
 

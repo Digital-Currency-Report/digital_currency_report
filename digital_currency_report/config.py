@@ -17,6 +17,8 @@ class Config(BaseSettings):
     PACKAGE: str = __package__
     RELEASE: str
     TAG: str
+    # 最大任务池大小
+    Pool_Size: int = 10
 
     # web
     ACCESS_TOKEN_EXPIRE: int = 60 * 60 * 24
