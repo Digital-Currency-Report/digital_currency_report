@@ -11,10 +11,15 @@ from digital_currency_report.common.json import dumps
 
 class Config(BaseSettings):
     DEBUG: bool = True
+    DB_ECHO: bool = True
     PROJECT_NAME: str = 'digital_currency_report'
     PROJECT_PATH: Path = Path(__file__).parent.resolve()
+    PACKAGE: str = __package__
     RELEASE: str
     TAG: str
+
+    # web
+    ACCESS_TOKEN_EXPIRE: int = 60 * 60 * 24
 
     # database
     DB_HOST: str = 'postgres'
@@ -25,6 +30,13 @@ class Config(BaseSettings):
     # database url
     DB_URL: str
     SQLALCHEMY_URL: str
+
+    # redis
+    REDIS_HOST: str = 'redis'
+    REDIS_PORT: int = 6379
+    REDIS_DB: int = 0
+    REDIS_PASSWORD: str = None
+    REDIS_SOCKET_TIMEOUT: str = None
 
     class Config:
         json_dumps = dumps

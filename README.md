@@ -9,11 +9,17 @@
 > 开发分支请合并到 staging, 请勿直接 PR 到 master 分支
 > 
 > 开发流程: feature -> staging -> master
+> 
+> 接口文档链接 -> http://127.0.0.1:8000/docs
 
 
 #### 前置条件：
-
 - docker
+
+#### 开发环境：
+- docker
+- docker-compose
+- make
 
 #### 1、初始化项目
 

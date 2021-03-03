@@ -1,5 +1,3 @@
-
 if __name__ == '__main__':
-    print('hello word')
-    while True:
-        pass
+    from uvicorn import run
+    run(app='digital_currency_report.api.rule:app', host="0.0.0.0", port=8000, debug=True, reload=True)
