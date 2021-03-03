@@ -7,6 +7,8 @@
 
 ### 说明
 > 开发分支请合并到 staging, 请勿直接 PR 到 master 分支
+> 
+> 开发流程: feature -> staging -> master
 
 
 #### 前置条件：
